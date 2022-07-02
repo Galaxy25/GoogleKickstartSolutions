@@ -1,5 +1,5 @@
 cases = int(input())
-for case in range(1, cases+1):
+for case in range(1, cases + 1):
     correct = input()
     incorrect = input()
     delete = 0
