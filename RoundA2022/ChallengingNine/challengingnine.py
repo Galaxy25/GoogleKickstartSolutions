@@ -13,4 +13,4 @@ for i in range(1, int(cases) + 1):
         u += 1
     if end:
         number = number + str(divisor)
-    print(f"Case #{i}: {number[::-1]}")
+    print(f"Case #{i}: {int(number[::-1])}")
