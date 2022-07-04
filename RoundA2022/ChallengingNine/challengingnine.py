@@ -5,6 +5,9 @@ for i in range(1, int(cases) + 1):
     divisor = 9 - (int(number) % 9)
     number = number[::-1]
     u = 0
+    if divisor == 9:
+        divisor = 0
+        u = 1
     end = True
     while u < len(number) and end:
         if divisor >= int(number[u]):
@@ -12,5 +15,5 @@ for i in range(1, int(cases) + 1):
             end = False
         u += 1
     if end:
-        number = number + str(divisor)
+        number = str(divisor) + number
     print(f"Case #{i}: {int(number[::-1])}")
