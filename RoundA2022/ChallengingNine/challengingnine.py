@@ -5,11 +5,10 @@ for i in range(1, int(cases) + 1):
     divisor = 9 - (int(number) % 9)
     number = number[::-1]
     u = 0
-    if divisor == 9:
-        divisor = 0
-        number = str(divisor) + number
-        end = False
     end = True
+    if divisor == 9:
+        number = "0" + number
+        end = False
     while u < len(number) and end:
         if divisor >= int(number[u]):
             number = number[:u] + str(divisor) + number[u:]
